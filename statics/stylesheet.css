@@ -1,0 +1,859 @@
+/* miscelleneous */
+.home , .about , .Education_content ,.project_content ,.contact{
+    display: none;
+}
+
+#clock {
+    font-size: 2rem;
+    color: #F5DEB3;
+    text-align: center;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.dt {
+    height: 50px;
+    width: 16vw;
+    background-color: #A52A2A;
+    opacity: 0.7;
+    font-weight: 700;
+    color: #111;
+    /* position: fixed; */
+    border-radius: 25px;
+    top: 17%;
+    left: 84%;
+    transform: translateY(-120%) translateX(-2%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "L ucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.hide {
+    overflow: hidden;
+}
+
+html, body {
+  max-width: 100%;
+  background-color: wheat;
+  font-size: 62.5%;
+ /* height:100%; */
+}
+
+/* <!-- navigation bar --> */
+#navbar{
+    height: 7rem;
+    width: 100%;
+    background: brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 5rem 0rem 10rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+
+nav .logo {
+    font-size: 4rem;
+    font-weight: bolder;
+    color: white;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin: 0rem 1rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    transition: all 0.3 ease-out;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+}
+.navbar.sticky{
+    padding: 1.5rem 0;
+    background: crimson;
+}
+nav ul li a:hover {
+    background: none;
+    color: yellow;
+}
+nav .checkbtn i {
+    color: white;
+    font-size: 2.2rem;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"] {
+    display: none;
+  }
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 4rem 0 5rem;
+    }
+
+    .table, row1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+@media only screen and (max-width: 920px) {
+    nav .checkbtn i {
+        display: block;
+    }
+    #click:checked ~ .checkbtn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 7rem;
+        left: -100%;
+        opacity: 0.75;
+        background: black;
+        height: auto;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    #click:checked ~ ul {
+        left: 0;
+    }
+    nav ul li {
+        width: 100%;
+        /* margin: 10px 0; */
+    }
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        /* font-size: 15px; */
+        transition: all 0.3 ease-out;
+    }
+    #click:checked ~ ul li a {
+        margin-left: 0rem;
+    }
+    nav ul li a:hover {
+        background: none;
+        color: yellow;
+    }  
+}
+
+/* <!-- wrapper  --> */
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    /* flex-direction: row; */
+}
+.main_window
+{
+    text-align: left;  
+}
+
+/* <!-- home-section --> */
+.back{
+    /* z-index: -1; */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+    /* height: 100vh; */
+}
+
+.home {
+    overflow: hidden;
+}
+
+.home_content{
+    display: flex;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.wrap{
+    font-size: 8rem;
+}
+
+.apt {
+    text-align: center;
+    color:white;
+    font-size: 14rem;
+    position:absolute;
+    top: 50%;
+    left: 45%;
+    width:100vw;
+    transform: translate(-50%,-50%);
+}
+
+.typewrite { 
+    color:brown; 
+    text-decoration: none; 
+    margin-left: 12rem; 
+    margin-bottom: 900; 
+    font-weight: bolder;
+}
+
+/* <!-- about-section --> */
+.about-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.proj-img {
+    display: block;
+    margin-top: -10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.diksha {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.column_left{
+    width: 45%;
+}
+
+.column_right{
+    width: 55%;
+}
+
+.about-content .column_right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    border-radius: 0.6rem;
+    border: 0.2rem solid crimson;
+    transition: all 0.3s ease;
+  }
+.about-content .column_right a:hover{
+    color: crimson;
+    background: none;
+}
+
+.about-content .column_right .text{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: crimson;
+}
+.about-content .column_right p{
+    text-align: justify;
+    font-size: 1.5rem;
+    max-width: 80%;
+}
+
+/* <!-- education-section --> */
+.edu-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.styled-table {
+    border-collapse: collapse;
+    /* margin: 2.5rem 0; */
+    /* font-size: 0.9em; */
+    font-family: sans-serif;
+    /* min-width: 40rem; */
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 1.2rem 1.5rem;
+}
+.styled-table tbody tr {
+    border-bottom: 0.1rem solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 0.2rem solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+  
+.table{
+    /* position: relative; */
+    /* padding-left: 51rem; */
+    /* height: 100%;
+    width: 100%; */
+    /* padding-left: 43rem; */
+    color: brown;
+    font-size: 1.5rem;
+    margin-top: 3vh;
+    max-width: 95%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+
+/* <!-- project-section --> */
+.caption {
+    font-size: 3rem;
+}
+
+.pro {
+    max-width:95%;
+    margin : 0;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.img1 {
+    height: 200px;
+}
+
+.first-div {
+    /* width:50%;
+    height: 100vh;
+    margin : 0;
+    padding-top: 12rem;
+    float : left ; */
+    max-width: 50%;
+    /* margin-top: 7vh; */
+    background-color:wheat;
+    color: brown ;
+    font-size: 6.5rem;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+}
+    
+.second-div {
+    /* width:50%;
+    margin : 0;
+    height: 100vh;
+    padding-top: 12rem;
+    float : left ; */
+    max-width: 50%;
+    /* margin-top: 7vh; */
+    background-color:wheat;
+    color:brown;
+    font-size: 6.5rem;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+}
+
+.fon{
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    font-size: 2.5rem;
+    color: brown;
+}
+
+/* <!-- contacts-section --> */
+.row1{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    /* padding-top: 4rem; */
+    margin-top: 10vh;
+    max-width: 95%;
+}
+
+.row1 .card{
+    background: #fff;
+    /* width: 24rem;
+    margin: 2rem;
+    padding: 2.5rem; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0.5rem 2.5rem rgba(1 1 1 / 15%);
+    border-radius: 1rem;
+}
+    
+.row1 .card .contact-icon{
+    color: #3a6cf4;
+    font-size: 4rem;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+    
+.row1 .card:hover .contact-icon{
+    transform: translateY(-10px);
+}
+    
+.row1 .card .info{
+    text-align: center;
+}
+    
+.row1 .card .info h3{
+    color: #111;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem;
+    /* background-color: wheat; */
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    background-color: wheat;
+    overflow: hidden;
+    height:100%;
+}
+
+.msg {
+    width: 100vw;
+}
+
+.content-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-links {
+    /* margin-top: 10vh; */
+}
+  
+.content .row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80vw;
+}
+  
+.content .row .card{
+    background: #fff;
+    width: 24rem;
+    margin: 2rem;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0.5rem 2.5rem rgba(1 1 1 / 15%);
+    border-radius: 1rem;
+  }
+  
+.content .row .card .contact-icon{
+    color: #3a6cf4;
+    font-size: 6.4rem;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+  
+.content .row .card:hover .contact-icon{
+    transform: translateY(-10px);
+  }
+  
+.content .row .card .info{
+    text-align: center;
+  }
+  
+.content .row .card .info h3{
+    color: #111;
+    font-size: 1.92rem;
+    font-weight: 700;
+    margin: 1rem;
+    /* background-color: wheat; */
+}
+  
+.content .row .card .info span{
+    color: #666;
+    font-weight: 500;
+    /* background-color: wheat; */
+}
+  
+.contact-form{
+    background: #fff;
+    width: 60vw;
+    margin-top: 2rem;
+    padding: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2.5rem rgba(1 1 1 / 15%);
+    /* background-color: wheat; */
+}
+  
+.contact-form h3{
+    color: #111;
+    font-size: 2.56rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 4rem;
+    /* background-color: wheat; */
+}
+  
+.contact-form .input-box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+  
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+    color: #111;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    outline: none;
+    border: 0.1rem solid #111;
+    border-radius: 0.5rem;
+    resize: none;
+}
+  
+.contact-form .input-box .send-btn{
+    color: #fff;
+    background: #3a6cf4;
+    display: inline-block;
+    font-size: 1.76rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+  
+.contact-form .input-box .send-btn:hover{
+    background: #235bf6;
+}
+  
+.footer-title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+  
+.para{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.links 
+{
+    margin-top: 3rem;    
+}
+.links ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    margin-bottom: 3rem;
+}
+.links ul li {
+    /* padding-left: 4rem; */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+  
+.pic{
+    display: inline-block;
+    float: left;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+/* media queries  */
+
+@media screen and (max-height: 600px){
+    .column_left img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) and ( min-width : 480px){
+    .wrap{
+        font-size: 3rem;
+        position: absolute;
+        left:25vw;
+    }
+
+    nav .logo{
+        font-size: 2rem;
+    }
+    .column_left{
+        width:100vw;
+        display: block;
+        /* left: 50%; */
+      
+    }
+
+    .proj-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .fon{
+        font-size: 1.5rem;
+    }
+
+    .diksha {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        padding-top: 10rem;
+    }    
+
+    .about-content .column_right{
+        text-align: justify;
+        font-size: 1.5rem;
+        margin-top: 3vh;
+    }
+
+    .col-right {
+        padding-left: 10%;
+        margin-right: -10%;
+    }
+
+    /* .column_left img{
+      left: 50%;
+    } */
+    .column_right{
+        width:100vw;
+        display: block;
+        /* left: 50%; */
+    }
+    .about-content{
+        flex-direction: column;
+    }
+
+    .row1 {
+        display: none;
+    }
+
+    .pro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-div, .second-div {
+        display: block;
+        max-width: 100%;
+        /* flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 95vw; */
+    }
+
+    .first-div {
+        margin-top: 60vh;
+        padding-top: 10vh;
+    }
+
+    .second-div {
+        padding-bottom: 5vh;
+        margin-top: 5vh;
+    }
+
+    .content .top-links{
+        display: none;
+    }
+    .contact-form{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:480px){
+    .wrap{
+        font-size: 3rem;
+        position: absolute;
+        left:25vw;
+    }
+    nav .logo{
+        font-size: 2rem;
+    }
+    .row1 {
+        display: none;
+    }
+    .column_left {
+        display: none;
+    }
+    .col-right{
+        width: 100vw;
+        padding-left: 10vw;
+    }
+    .fon{
+        font-size: 1.5rem;
+    }
+
+    .pro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-div, .second-div {
+        display: block;
+        max-width: 100%;
+        /* flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 95vw; */
+    }
+
+    .first-div {
+        margin-top: 70vh;
+        padding-top: 10vh;
+    }
+
+    .second-div {
+        padding-bottom: 5vh;
+        margin-top: 5vh;
+    }
+    .content .top-links{
+        display: none;
+    }
+    .contact-form{
+        width: 100vw;
+    }
+    #clock {
+        font-size: 2rem;
+        color: #F5DEB3;
+        text-align: center;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        /* height: 40px; 
+        position: fixed; 
+        bottom:0%;
+        width:100%; 
+        background-color: #393838; 
+        opacity: 1; */
+    }
+    .dt {
+        width: 50vw;
+        left: 80%;
+       /* height: 40%; */
+        bottom: 20%;
+        margin-left: 30%;
+        /* margin-bottom: 80%; */
+        transform: translateY(-120%) translateX(-5%);
+
+    }
+
+    
+}
+
+@media screen and (max-width:920px) and ( min-width : 600px){
+    .pro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-div, .second-div {
+        display: block;
+        max-width: 100%;
+        /* flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 95vw; */
+    }
+
+    .first-div {
+        margin-top: 110vh;
+    }
+
+    .second-div {
+        padding-bottom: 5vh;
+        margin-top: 5vh;
+    }
+    .content .top-links{
+        display: none;
+    }
+    .msg{
+        width: 90vw;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .pro {
+        margin-top: 10vh;
+        padding-top: 10vh;
+    }
+    .top-links {
+        margin-top: 10vh;
+    }
+}
+
+@media screen and (min-width: 920px) and (max-width: 1400px) {
+    .top-links{
+        margin-top: 30vh;
+
+    }
+    .dt {
+        width: 22vw;
+        left: 78%;
+    }
+
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+    .dt {
+        width: 20vw;
+        left: 80%;
+    }
+}
