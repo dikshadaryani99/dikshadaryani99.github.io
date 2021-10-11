@@ -135,12 +135,12 @@ function myfun(s) {
 }
 
 function currentTime() {
-    function refine(s) {
-        if (s < 10) {
-            s = "0" + s;
-        }
-        return s;
-    }
+//     function refine(s) {
+//         if (s < 10) {
+//             s = "0" + s;
+//         }
+//         return s;
+//     }
 
     let date = new Date(); 
     let hh = date.getHours();
@@ -149,8 +149,8 @@ function currentTime() {
     let session = "AM";
     // let dd = String(date.getDate()).padStart(2, '0');
 
-    let d = refine(date.getDate());
-    let mo = refine(date.getMonth());
+    let d = date.getDate();
+    let mo = date.getMonth()+1;
     let y = date.getFullYear();
     // document.getElementById("clock").innerHTML = d + "/" + mo + "/" + y;
     dd = d + "/" + mo + "/" + y
